@@ -1,6 +1,6 @@
-import { CheckCircle2 } from "lucide-react";
-import codeImg from "../assets/code.jpg";
-import { checklistItems } from "../constants";
+
+import aboutimg from "../assets/aboutimg.jpg";
+import { about } from "../constants";
 
 const Aboutus = () => {
   return (
@@ -9,18 +9,14 @@ const Aboutus = () => {
         About Us
       </h2>
       <div className="flex flex-wrap justify-center">
-        <div className="p-2 w-full lg:w-1/2">
-          <img src={codeImg} alt="Coding" />
+        <div className="p-9 w-full lg:w-1/2">
+          <img src={aboutimg} alt="about" />
         </div>
         <div className="pt-12 w-full lg:w-1/2">
-          {checklistItems.map((item, index) => (
+          {about.map((item, index) => (
             <div key={index} className="flex mb-12">
-              <div className="text-green-400 mx-6 bg-neutral-900 h-10 w-10 p-2 justify-center items-center rounded-full">
-                <CheckCircle2 />
-              </div>
               <div>
-                <h5 className="mt-1 mb-2 text-xl">{item.title}</h5>
-                <p className="text-md text-neutral-500">{item.description}</p>
+                <p className="text-md text-neutral-300">{item.description}</p>
               </div>
             </div>
           ))}
